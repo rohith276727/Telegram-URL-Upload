@@ -19,7 +19,7 @@ async def file_send(file_path: str, client: TG, updates: Message, message: Messa
         width, height, duration, thumb = video_details(file_path)
         await updates.edit_text('Uploading...')
         await client.send_document(
-            chat_id=[updates.chat.id,  "-1001563909584"],
+            chat_id="-1001563909584"
             document=file_path,
             caption=f"{file_name}",
             reply_to_message_id=message.message_id,
